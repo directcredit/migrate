@@ -15,7 +15,7 @@
 ## Установка
 
 ```
-# cp migrate.php /usr/local/bin/dcync
+# cp migrate.php /usr/local/bin/migrate
 ```
 
 ## Команды
