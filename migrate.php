@@ -2,7 +2,7 @@
 <?php
 
 /**
- * DC Migrations
+ * Migrate
  *
  * @author <masterklavi@gmail.com>
  * @version 0.3
