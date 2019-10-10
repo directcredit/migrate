@@ -5,7 +5,7 @@
  * Migrate
  *
  * @author <masterklavi@gmail.com>
- * @version 0.3
+ * @version 0.3.1
  */
 
 declare(strict_types=1);
@@ -15,7 +15,7 @@ ini_set('display_errors', 'On');
 
 (new class() {
 
-    const VERSION = 0.3;
+    const VERSION = '0.3.1';
 
     const VERSION_TABLE     = '_migrate_version';
     const HISTORY_TABLE     = '_migrate_history';
@@ -77,6 +77,10 @@ ini_set('display_errors', 'On');
     public function main(int $argc, array $argv)
     {
         // check flags
+
+        if (getenv('APP_ENV') === 'dev') {
+            $this->includeDev = true;
+        }
 
         foreach ($argv as $k => $v) {
             if ($v === '--dev') {
