@@ -505,6 +505,8 @@ ini_set('display_errors', 'On');
             }
         }
 
+        uksort($parts, "strnatcmp");
+
         return $parts;
     }
 
